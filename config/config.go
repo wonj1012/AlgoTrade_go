@@ -15,7 +15,7 @@ func SetFutureConfig(binanceFuture *api.BinanceFuture, logger *record.Logger) {
 
 	var commonPositionRisk []*futures.PositionRisk
 
-	for _, symbol := range symbols {
+	for _, symbol := range Symbols {
 		for _, positionRisk := range positionRisks {
 			if symbol == positionRisk.Symbol {
 				commonPositionRisk = append(commonPositionRisk, positionRisk)
